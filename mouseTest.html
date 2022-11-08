@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" charset="utf-8"/>
+        <link rel="stylesheet" type ="text/CSS" href="mouseTest.css"/>
+        <title>有輸入欄位的網頁</title>
+    </head>
+    <body>
+        <div class="lobby">
+            <div class="tab">
+                <div class="count" id="accumulate1" >0</div>
+            </div>
+            <div class="clickRoom">
+                <div class="sub" onclick="sub1()" >-</div>
+                <div class="plus" onclick="plus1()" >+</div>
+            </div>
+            <div class="resetRoom">
+                <div class="reset" onclick="set0()">重設為零</div>
+            </div>
+        </div>
+        <hr/>
+        <script>
+            let plus1=function(){
+                let A=document.querySelector("#accumulate1");
+                let n=A.innerHTML;
+                add=Number(n)+1;
+                A.innerHTML=add;
+            }
+            let sub1=function(){
+                let A=document.querySelector("#accumulate1");
+                let n=A.innerHTML;
+                substract=Number(n)-1;
+                A.innerHTML=substract;
+            }
+            let set0=function(){
+                let A=document.querySelector("#accumulate1");
+                A.innerHTML=0;
+            }
+
+        </script>
+    </body>
+</html>
